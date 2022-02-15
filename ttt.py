@@ -16,10 +16,10 @@ def play_turn():
 def check_win():
     for i in range(3):
         if board[i][0] == board[i][1] == board[i][2] == 'O' or \
-           board[0][i] == board[1][i] == board[2][i] == 'O':     # cols
+           board[0][i] == board[1][i] == board[2][i] == 'O':    # cols
                print('win')
     if board[0][0] == board[1][1] == board[2][2] == 'O' \
-    or board[0][2] == board[1][1] == board[2][0] == 'O':
+    or board[0][2] == board[1][1] == board[2][0] == 'O':        # diags
         print('win')
 
 for i in range(9):
