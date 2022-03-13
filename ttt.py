@@ -28,12 +28,15 @@ def checkwinner(msg):
         print(msg)
         return 'stop'
 
-    hashes = 0
+    space = False
     for row in range (3):
         for col in range (3):
             if board[row][col] == ' ':
-                hashes = hashes + 1
-    if hashes == 0:
+                space = True
+                break
+        if space:
+            break
+    if not space:
         print('Its a Draw!')
         return 'stop'
 
